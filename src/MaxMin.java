@@ -7,10 +7,13 @@ public class MaxMin <T extends Comparable<T>>{
         this.b=b;
         this.c=c;
     }
-    public void maxMin() {
+    public static<T extends Comparable<T>> void maxMin(T a , T b, T c){
         T max = a.compareTo(b) > 0 ? a : b;
         max = max.compareTo(c) > 0 ? max : c;
         System.out.println("Max of given values is: " + max);
+    }
+    public void maxMin() {
+        maxMin(a,b,c);
     }
 
     public static void main(String[] args) {
